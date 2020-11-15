@@ -6,9 +6,9 @@ const sumFloor = Math.floor(apple + orange + pear);
 const roundingToHundreds = Math.ceil(sum / 100) * 100;
 const payment = 500;
 const middlePrice = Number((sum / 3).toFixed(2));
-const randomDiscount = Math.random();
+const randomDiscount = (Math.random() * 100).toFixed(0);
 const discountPrice = Number((sum - randomDiscount).toFixed(2));
-const netProfit = sum / 2 - randomDiscount;
+const netProfit = (sum / 2 - randomDiscount).toFixed(2);
 
 console.log(Math.max(apple, orange, pear));
 console.log(Math.min(apple, orange, pear));
