@@ -18,19 +18,16 @@ console.log(payment - sum);
 console.log(middlePrice);
 console.log(discountPrice);
 console.log(
-  `Максимальнt число: ${Math.max(
-    apple,
-    orange,
-    pear
-  )}, Мінімальне число: ${Math.min(
-    apple,
-    orange,
-    pear
-  )}, Варстість товарів: ${sum}, Округлення в меншу сторону: ${Math.floor(
-    apple + orange + pear
-  )}, Округлення до сотен: ${roundingToHundreds}, Чи є сума всіх товарів парним або непарним числом: ${
+  `Максимальне число: ${Math.max(apple, orange, pear)}
+  Мінімальне число: ${Math.min(apple, orange, pear)}
+  Варстість товарів: ${sum}
+  Округлення в меншу сторону: ${Math.floor(apple + orange + pear)}
+  Округлення до сотен: ${roundingToHundreds}
+  Чи є сума всіх товарів парним або непарним числом: ${
     sumFloor % 2 === 0 ? 'yes' : 'no'
-  }, Решта: ${
-    payment - sum
-  }, Середня ціна: ${middlePrice}, Випадкова знижка: ${randomDiscount}, Чистий прибуток: ${netProfit}`
+  }
+  Решта: ${payment - sum}
+  Середня ціна: ${middlePrice}
+  Випадкова знижка: ${randomDiscount}
+  Чистий прибуток: ${netProfit}`
 );
