@@ -1,32 +1,43 @@
-const apple = 15.678;
-const orange = 123.965;
-const pear = 90.2345;
-const sum = apple + orange + pear;
-const sumFloor = Math.floor(apple + orange + pear);
-const roundingToHundreds = Math.ceil(sum / 100) * 100;
-const payment = 500;
-const middlePrice = Number((sum / 3).toFixed(2));
-const randomDiscount = (Math.random() * 100).toFixed(0);
-const discountPrice = Number((sum - randomDiscount).toFixed(2));
-const netProfit = (sum / 2 - randomDiscount).toFixed(2);
+const applePrice = 15.678;
+const orangePrice = 123.965;
+const pearPrice = 90.2345;
 
-console.log(Math.max(apple, orange, pear));
-console.log(Math.min(apple, orange, pear));
+const maxPrice = Math.max(applePrice, orangePrice, pearPrice);
+console.log(maxPrice);
+
+const minPrice = Math.min(applePrice, orangePrice, pearPrice);
+console.log(minPrice);
+
+const sumPrice = applePrice + orangePrice + pearPrice;
+
+const sumFloor = Math.floor(applePrice + orangePrice + pearPrice);
+
+const roundingToHundreds = Math.ceil(sumPrice / 100) * 100;
 console.log(roundingToHundreds);
-console.log(sumFloor % 2 === 0 ? 'yes' : 'no');
-console.log(payment - sum);
+
+const sumFloorEvenOrNotEnen = sumFloor % 2 === 0 ? true : false;
+console.log(sumFloorEvenOrNotEnen);
+
+const payment = 500;
+const sumOfRest = payment - sumPrice;
+console.log(sumOfRest);
+
+const middlePrice = Number((sumPrice / 3).toFixed(2));
 console.log(middlePrice);
-console.log(discountPrice);
+
+const randomDiscount = Math.round(Math.random() * 100);
+
+const netProfit = Number((sumPrice / 2 - randomDiscount).toFixed(2));
+console.log(netProfit);
+
 console.log(
-  `Максимальне число: ${Math.max(apple, orange, pear)}
-  Мінімальне число: ${Math.min(apple, orange, pear)}
-  Варстість товарів: ${sum}
-  Округлення в меншу сторону: ${Math.floor(apple + orange + pear)}
+  `Максимальне число: ${maxPrice}
+  Мінімальне число: ${minPrice}
+  Варстість товарів: ${sumPrice}
+  Округлення в меншу сторону: ${sumFloor}
   Округлення до сотен: ${roundingToHundreds}
-  Чи є сума всіх товарів парним або непарним числом: ${
-    sumFloor % 2 === 0 ? 'yes' : 'no'
-  }
-  Решта: ${payment - sum}
+  Чи є сума всіх товарів парним або непарним числом: ${sumFloorEvenOrNotEnen}
+  Решта: ${sumOfRest}
   Середня ціна: ${middlePrice}
   Випадкова знижка: ${randomDiscount}
   Чистий прибуток: ${netProfit}`
