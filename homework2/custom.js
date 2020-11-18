@@ -1,10 +1,21 @@
-let firstNum = +prompt(`Please, whrite a number from which we will add`);
-let endNum = +prompt(`Please, whrite a number to wich we will add`);
-let skipEvenNum = confirm(`Skip even numbers?`);
-console.log(Number.isInteger(firstNum) ? `correct` : `wrong`);
-console.log(Number.isInteger(endNum) ? `correct` : `wrong`);
-let sumNum = 0;
+let firstNum;
+let endNum;
+
+do {
+  firstNum = +prompt(`Please, whrite a number from which we will add`);
+} while (!Number.isInteger(firstNum));
+
+do {
+  endNum = +prompt(`Please, whrite a number to wich we will add`);
+} while (!Number.isInteger(endNum));
+
+let skipEvenNum = confirm(`Do you need to skip even numbers?`);
+
+let sumOfNum = 0;
 for (let i = firstNum; i <= endNum; i++) {
-  if (i % 2 === 1 || (i % 2 === 0 && skipEvenNum === 'false')) sumNum += i;
+  if (skipEvenNum && i % 2 === 0) {
+    continue;
+  }
+  sumOfNum += i;
 }
-console.log(sumNum);
+console.log(sumOfNum);
