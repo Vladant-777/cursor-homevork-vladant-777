@@ -3,13 +3,18 @@ let endNum;
 
 do {
   firstNum = +prompt(`Please, whrite a number from which we will add`);
-} while (!Number.isInteger(firstNum));
+} while (!Number.isInteger(firstNum) || firstNum == '' || isNaN(firstNum));
 
 do {
   endNum = +prompt(`Please, whrite a number to wich we will add`);
-} while (!Number.isInteger(endNum));
+} while (
+  !Number.isInteger(endNum) ||
+  endNum == '' ||
+  isNaN(endNum) ||
+  endNum < firstNum
+);
 
-let skipEvenNum = confirm(`Do you need to skip even numbers?`);
+const skipEvenNum = confirm(`Do you need to skip even numbers?`);
 
 let sumOfNum = 0;
 for (let i = firstNum; i <= endNum; i++) {
