@@ -1,12 +1,9 @@
 const getMaxDigit = (number) => Math.max(...(number + '').split(''));
 
-const getChangeName = (name) => {
-  const newName =
-    name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
-  return newName;
-};
+const getChangeName = (name) =>
+  name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
 
-const getProfit = (profit) => profit - (profit / 100) * 19.5;
+const getProfit = (profit, tax = 19.5) => profit - (profit / 100) * tax;
 
 const getRandomNum = (minNum, maxNum) =>
   Math.round(Math.random() * (maxNum - minNum) + minNum);
