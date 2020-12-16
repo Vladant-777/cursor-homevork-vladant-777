@@ -18,9 +18,7 @@ const getCountLetter = (string, letter) => {
   return counter;
 };
 
-const deleteLetters = function (letter, string) {
-  return string.replaceAll(letter, '');
-};
+const deleteLetters = (letter, string) => string.replaceAll(letter, '');
 
 console.log(`Функція №1: ${getMaxDigit(12345567)}
 Функція №3: ${getChangeName('garold')}
