@@ -5,16 +5,19 @@ const litva = { tax: 0.15, middleSalary: 1509, vacancies: 1114 };
 const getMyTaxes = function (salary) {
   return +(this.tax * salary).toFixed(2);
 };
-console.log(getMyTaxes.call(ukraine, 37526));
+
+console.log(getMyTaxes.call(ukraine, 56467));
 
 const getMiddleTaxes = function () {
   return +(this.tax * this.middleSalary).toFixed(2);
 };
+
 console.log(getMiddleTaxes.call(ukraine));
 
 const getTotalTaxes = function () {
   return +(this.tax * this.middleSalary * this.vacancies).toFixed(2);
 };
+
 console.log(getTotalTaxes.call(ukraine));
 
 const getMySalary = function () {
@@ -22,7 +25,12 @@ const getMySalary = function () {
     const salary = Math.floor(Math.random() * (2000 - 1500 + 1)) + 1500;
     const taxes = +(this.tax * salary).toFixed(2);
     const profit = +(salary - taxes).toFixed(2);
-    console.log({ salary, taxes, profit });
+    console.log({
+      salary,
+      taxes,
+      profit,
+    });
   }, 10000);
 };
-console.log(getMySalary.call(ukraine));
+
+getMySalary.call(ukraine);
