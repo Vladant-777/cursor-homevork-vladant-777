@@ -6,7 +6,6 @@ const getRandomArray = (length, min, max) => {
   }
   return randomArr;
 };
-
 console.log(getRandomArray(5, 1, 10));
 
 //Function3
