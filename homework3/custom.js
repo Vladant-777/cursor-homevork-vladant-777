@@ -1,13 +1,14 @@
+//1
 const getMaxDigit = (number) => Math.max(...(number + '').split(''));
-
+//2
 const getChangeName = (name) =>
   name.substring(0, 1).toUpperCase() + name.substring(1).toLowerCase();
-
+//3
 const getProfit = (profit, tax = 19.5) => profit - (profit / 100) * tax;
-
+//4
 const getRandomNum = (minNum, maxNum) =>
   Math.round(Math.random() * (maxNum - minNum) + minNum);
-
+//5
 const getCountLetter = (string, letter) => {
   let counter = 0;
   for (let i = 0; i < string.length; i++) {
@@ -17,7 +18,7 @@ const getCountLetter = (string, letter) => {
   }
   return counter;
 };
-
+//6
 const deleteLetters = (letter, string) => string.replaceAll(letter, '');
 
 console.log(`Функція №1: ${getMaxDigit(12345567)}
