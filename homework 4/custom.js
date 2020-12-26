@@ -23,7 +23,7 @@ console.log(pairs);
 
 const getPairsWithThemes = (pairs, themes) => {
   const pairsWhithThemes = [];
-  pairs.forEach((pair, i) => {
+  pairs.map((pair, i) => {
     const getherPair = [pair[0] + ' i ' + pair[1], themes[i]];
     pairsWhithThemes.push(getherPair);
   });
